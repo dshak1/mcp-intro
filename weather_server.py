@@ -72,12 +72,13 @@ async def main():
             server.create_initialization_options()
         )
 
-
+#This line is a common Python idiom that checks if the current script is being run directly as the main program, rather than being imported as a module into another script.
 if __name__ == "__main__":
-    import asyncio
+    import asyncio #it looks a bit weird having an import statement here but think about it, it takes time to load so basiaclly we only load it when we acc need it
     asyncio.run(main())
+
 #This code checks if the script is run directly
 #  (via if __name__ == "__main__") and, if so, executes 
 # the asynchronous main() function using asyncio.run(), 
 # which sets up and runs an MCP server using standard input/output streams
-# for communication.
+# for communication.````
