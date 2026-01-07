@@ -81,4 +81,37 @@ if __name__ == "__main__":
 #  (via if __name__ == "__main__") and, if so, executes 
 # the asynchronous main() function using asyncio.run(), 
 # which sets up and runs an MCP server using standard input/output streams
-# for communication.````
+# for communication.```
+# 
+# 
+# `
+
+
+
+
+'''
+
+
+summary in my own words :
+basically we got a server object which is the mcp server uinstance
+it basically saying that im a tool provude and clients can connect to me to get em
+
+@serverllist_tools()
+this esesentially like a idk
+tells u the tools it has and their correpsonding schemas
+name itself is just the stirng rthe agent will call 
+
+descruptinon is fo rhte model to pick the rigbhr tool
+required lists which property names must be present
+n city is def under properties and city appears in required 
+
+
+
+ie 
+list tools is like a menu 
+call tool is liek a kitchen 
+schema is the order form 
+arguments is the filled order from custyomer
+text content is the chefs output :
+
+'''
