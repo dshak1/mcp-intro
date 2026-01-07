@@ -76,3 +76,8 @@ async def main():
 if __name__ == "__main__":
     import asyncio
     asyncio.run(main())
+#This code checks if the script is run directly
+#  (via if __name__ == "__main__") and, if so, executes 
+# the asynchronous main() function using asyncio.run(), 
+# which sets up and runs an MCP server using standard input/output streams
+# for communication.
