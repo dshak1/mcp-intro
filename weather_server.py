@@ -26,11 +26,13 @@ async def list_tools() -> list[Tool]:
             inputSchema={
                 "type": "object",
                 "properties": {
-                    # TODO: What properties should get_weather accept?
-                    
-                    # Hint: What do you need to know to get weather for a location?
+                    "city": {
+                        "type": "string",
+                        "description": "Name of the city to get weather for"
+                    }
+                    # CHALLENGE: Want to add more? Try adding "units" (celsius/fahrenheit)!
                 },
-                "required": []  # TODO: Which properties are required?
+                "required": ["city"]  # City is required!
             }
         )
     ]
@@ -45,13 +47,16 @@ async def call_tool(name: str, arguments: dict) -> list[TextContent]:
     QUESTION FOR YOU: What should happen when the client calls 'get_weather'?
     """
     if name == "get_weather":
-        # TODO: Extract the city from arguments
-        # TODO: Get weather data (for now, just return fake data)
-        # TODO: Return the result as TextContent
+        # Extract the city from arguments
+        city = arguments.get("city", "Unknown")
+        
+        # For now, return fake weather data
+        # Later you could call a real weather API!
+        weather_report = f"Weather in {city}: 72°F (22°C), Sunny with clear skies ☀️"
         
         return [TextContent(
             type="text",
-            text="TODO: Return weather data here!"
+            text=weather_report
         )]
     else:
         raise ValueError(f"Unknown tool: {name}")
