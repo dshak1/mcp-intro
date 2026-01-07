@@ -114,4 +114,11 @@ schema is the order form
 arguments is the filled order from custyomer
 text content is the chefs output :
 
+
+
+next step is continue the video from 
+47:12 and do it with postman
+
 '''
+
+
